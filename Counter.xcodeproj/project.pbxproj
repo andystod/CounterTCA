@@ -17,6 +17,10 @@
 		4948B5462B7D13630085D536 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5452B7D13630085D536 /* CounterFeature.swift */; };
 		4948B5492B7D138D0085D536 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4948B5482B7D138D0085D536 /* ComposableArchitecture */; };
 		4948B54C2B7D27160085D536 /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B54B2B7D27150085D536 /* NumberFactClient.swift */; };
+		4948B54E2B7D43FF0085D536 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B54D2B7D43FF0085D536 /* AppFeature.swift */; };
+		4948B5512B7D48010085D536 /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5502B7D48010085D536 /* AppFeatureTests.swift */; };
+		4948B5532B7D52B40085D536 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5522B7D52B40085D536 /* ContactsFeature.swift */; };
+		4948B5552B7D5D850085D536 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5542B7D5D850085D536 /* AddContactFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		4948B5452B7D13630085D536 /* CounterFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		4948B54A2B7D142E0085D536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4948B54B2B7D27150085D536 /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
+		4948B54D2B7D43FF0085D536 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		4948B5502B7D48010085D536 /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
+		4948B5522B7D52B40085D536 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
+		4948B5542B7D5D850085D536 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,8 @@
 		4948B51A2B7D13470085D536 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				4948B54F2B7D44190085D536 /* Features */,
 				4948B54A2B7D142E0085D536 /* Info.plist */,
-				4948B5452B7D13630085D536 /* CounterFeature.swift */,
 				4948B54B2B7D27150085D536 /* NumberFactClient.swift */,
 				4948B51B2B7D13470085D536 /* CounterApp.swift */,
 				4948B51D2B7D13470085D536 /* ContentView.swift */,
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				4948B52C2B7D13480085D536 /* CounterFeatureTests.swift */,
+				4948B5502B7D48010085D536 /* AppFeatureTests.swift */,
 			);
 			path = CounterTests;
 			sourceTree = "<group>";
@@ -135,6 +144,25 @@
 				4948B5382B7D13480085D536 /* CounterUITestsLaunchTests.swift */,
 			);
 			path = CounterUITests;
+			sourceTree = "<group>";
+		};
+		4948B54F2B7D44190085D536 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4948B5562B7D5EA20085D536 /* Contacts */,
+				4948B5452B7D13630085D536 /* CounterFeature.swift */,
+				4948B54D2B7D43FF0085D536 /* AppFeature.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4948B5562B7D5EA20085D536 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				4948B5522B7D52B40085D536 /* ContactsFeature.swift */,
+				4948B5542B7D5D850085D536 /* AddContactFeature.swift */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4948B5462B7D13630085D536 /* CounterFeature.swift in Sources */,
+				4948B54E2B7D43FF0085D536 /* AppFeature.swift in Sources */,
 				4948B51E2B7D13470085D536 /* ContentView.swift in Sources */,
 				4948B51C2B7D13470085D536 /* CounterApp.swift in Sources */,
 				4948B54C2B7D27160085D536 /* NumberFactClient.swift in Sources */,
+				4948B5532B7D52B40085D536 /* ContactsFeature.swift in Sources */,
+				4948B5552B7D5D850085D536 /* AddContactFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4948B5512B7D48010085D536 /* AppFeatureTests.swift in Sources */,
 				4948B52D2B7D13480085D536 /* CounterFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

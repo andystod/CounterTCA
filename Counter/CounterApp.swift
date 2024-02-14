@@ -3,14 +3,14 @@ import ComposableArchitecture
 
 @main
 struct CounterApp: App {
-  static let store = Store(initialState: CounterFeature.State()) {
-    CounterFeature()
+  static let store = Store(initialState: ContactsFeature.State()) {
+    ContactsFeature()
       ._printChanges()
   }
 
   var body: some Scene {
     WindowGroup {
-      CounterView(store: CounterApp.store)
+      ContactsView(store: CounterApp.store)
     }
   }
 }
