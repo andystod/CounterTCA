@@ -1,0 +1,40 @@
+# Xcode
+.DS_Store
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# build products
+build/
+Build/
+
+# various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserstate
+
+# Swift Package Manager
+.build/
+.swift-dependencies
+
+# OS X
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on Disk
+.Spotlight-V100
+.Trashes
