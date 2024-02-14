@@ -1,17 +1,16 @@
-//
-//  CounterApp.swift
-//  Counter
-//
-//  Created by Andrew Stoddart on 14/02/2024.
-//
-
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct CounterApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  static let store = Store(initialState: CounterFeature.State()) {
+    CounterFeature()
+      ._printChanges()
+  }
+
+  var body: some Scene {
+    WindowGroup {
+      CounterView(store: CounterApp.store)
     }
+  }
 }

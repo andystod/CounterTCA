@@ -14,6 +14,8 @@
 		4948B52D2B7D13480085D536 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B52C2B7D13480085D536 /* CounterTests.swift */; };
 		4948B5372B7D13480085D536 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5362B7D13480085D536 /* CounterUITests.swift */; };
 		4948B5392B7D13480085D536 /* CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5382B7D13480085D536 /* CounterUITestsLaunchTests.swift */; };
+		4948B5462B7D13630085D536 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4948B5452B7D13630085D536 /* CounterFeature.swift */; };
+		4948B5492B7D138D0085D536 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4948B5482B7D138D0085D536 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4948B5322B7D13480085D536 /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4948B5362B7D13480085D536 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		4948B5382B7D13480085D536 /* CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4948B5452B7D13630085D536 /* CounterFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		4948B54A2B7D142E0085D536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4948B5492B7D138D0085D536 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,8 @@
 		4948B51A2B7D13470085D536 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				4948B54A2B7D142E0085D536 /* Info.plist */,
+				4948B5452B7D13630085D536 /* CounterFeature.swift */,
 				4948B51B2B7D13470085D536 /* CounterApp.swift */,
 				4948B51D2B7D13470085D536 /* ContentView.swift */,
 				4948B51F2B7D13480085D536 /* Assets.xcassets */,
@@ -143,6 +150,9 @@
 			dependencies = (
 			);
 			name = Counter;
+			packageProductDependencies = (
+				4948B5482B7D138D0085D536 /* ComposableArchitecture */,
+			);
 			productName = Counter;
 			productReference = 4948B5182B7D13470085D536 /* Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 4948B50F2B7D13470085D536;
+			packageReferences = (
+				4948B5472B7D138D0085D536 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 4948B5192B7D13470085D536 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4948B5462B7D13630085D536 /* CounterFeature.swift in Sources */,
 				4948B51E2B7D13470085D536 /* ContentView.swift in Sources */,
 				4948B51C2B7D13470085D536 /* CounterApp.swift in Sources */,
 			);
@@ -425,6 +439,7 @@
 				DEVELOPMENT_TEAM = 4UDDXWCBX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Counter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +469,7 @@
 				DEVELOPMENT_TEAM = 4UDDXWCBX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Counter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4948B5472B7D138D0085D536 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4948B5482B7D138D0085D536 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4948B5472B7D138D0085D536 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4948B5102B7D13470085D536 /* Project object */;
 }
