@@ -68,4 +68,35 @@ final class ContactsFeatureTests: XCTestCase {
       $0.destination = nil
     }
   }
+
+  func testDeleteContact() async {
+    let store = TestStore(
+      initialState: ContactsFeature.State(
+        contacts: [
+          Contact(id: UUID(0), name: "Liam"),
+          Contact(id: UUID(1), name: "abc")
+        ]
+      )
+    ) {
+      ContactsFeature()
+    }
+
+    store.exhaustivity = .off
+
+    await store.send(.deleteButtonTapped(id: UUID(0))) {
+      $0.destination = .alert(.deleteConfirmation(id: UUID(0)))
+    }
+
+    await store.send(.destination(.presented(.alert(.confirmDeletion(id: UUID(0)))))) {
+      $0.contacts.remove(id: UUID(0))
+      $0.destination = nil
+    }
+
+//    await store.send(.destination(.presented(.alert(.confirmDeletion(id: UUID(0))))))
+//
+//    store.assert {
+//      !$0.contacts.contains { $0.id == UUID(0) }
+//    }
+
+  }
 }

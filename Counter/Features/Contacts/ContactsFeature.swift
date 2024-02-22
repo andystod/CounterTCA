@@ -56,21 +56,23 @@ struct ContactsFeature {
         return .none
 
       case .deleteButtonTapped(id: let id):
-        state.destination = .alert(
-          AlertState {
-            TextState("Are you sure?")
-          } actions: {
-            ButtonState(
-              role: .destructive,
-              action: .confirmDeletion(id: id)) {
-                TextState("Delete")
-              }
-          }
-        )
+        state.destination = .alert(.deleteConfirmation(id: id))
         return .none
       }
     }
     .ifLet(\.$destination, action: \.destination)
+  }
+}
+
+extension AlertState where Action == ContactsFeature.Action.Alert {
+  static func deleteConfirmation(id: UUID) -> Self {
+    Self {
+      TextState("Are you sure?")
+    } actions: {
+      ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
+        TextState("Delete")
+      }
+    }
   }
 }
 
